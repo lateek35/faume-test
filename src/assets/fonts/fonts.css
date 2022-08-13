@@ -1,0 +1,26 @@
+/* OpenSans Font Definition */
+
+
+/* Regular */
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("OpenSans Regular"), local("OpenSans-Regular"),
+    url("OpenSans/OpenSans-Regular.woff2") format("woff2"),
+    url("OpenSans/OpenSans-Regular.woff") format("woff"),
+    url("OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("OpenSans Bold"), local("OpenSans-Bold"),
+    url("OpenSans/OpenSans-Bold.woff2") format("woff2"),
+    url("OpenSans/OpenSans-Bold.woff") format("woff"),
+    url("OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-display: swap;
+}

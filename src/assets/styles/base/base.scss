@@ -1,0 +1,58 @@
+// --------------------------------------------------
+// Default
+// --------------------------------------------------
+
+.noselect {
+    user-select: none;
+}
+
+// -------------------------
+// Reset the box-sizing
+// -------------------------
+
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+* {
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+// -------------------------
+// Body reset
+// -------------------------
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    -moz-font-feature-settings: "liga", "kern";
+    text-rendering: optimizelegibility;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+::-moz-selection {
+    color: color(white);
+    background: color(black);
+}
+
+::selection {
+    color: color(white);
+    background: color(black);
+}
+
+.disable-select {
+    user-select: none;
+}
+
+img {
+    display: block;
+    -ms-interpolation-mode: bicubic;
+}

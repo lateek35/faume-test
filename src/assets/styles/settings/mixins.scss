@@ -1,0 +1,49 @@
+@function font($key) {
+    @if map-has-key($fonts, $key) {
+        @return map-get($fonts, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $fonts.";
+    @return null;
+}
+
+@function color($key) {
+    @if map-has-key($colors, $key) {
+        @return map-get($colors, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $colors.";
+    @return null;
+}
+
+@function zindex($key) {
+    @if map-has-key($zindex, $key) {
+        @return map-get($zindex, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $zindex.";
+    @return null;
+}
+
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &::before {
+        position: relative;
+        content: '';
+        display: block;
+        height: 0;
+        width: 100%;
+        padding-top: ($height / $width * 100%);
+    }
+}
+
+
+@function grid($column, $total){
+  @return 100%/$total*$column;
+}
